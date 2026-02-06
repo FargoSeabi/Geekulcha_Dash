@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #202124;
+    line-height: 1.6;
+}
+
+/* Hero Banner */
+.hero-banner {
+    width: 100%;
+    background-color: #000; /* fallback if image fails */
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 300px; /* adjust based on your image aspect ratio – this prevents it being too tall on desktop */
+    object-fit: cover; /* or contain if you want full visibility */
+}
+
+/* Main Content */
+.container {
+   
+    margin: 1rem auto;
+    padding: 0 ;
+}
+
+.about, .affiliate-section {
+    background: white;
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+h2 {
+    color: #0f0303fd; /* red accent to match typical Geekulcha red from banner */
+    font-size: 1.9rem;
+    margin-bottom: 1.2rem;
+}
+
+.form-wrapper {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #dadce0;
+    background: white;
+}
+
+iframe {
+    width: 100%;
+    min-height: 900px;
+    border: none;
+    display: block;
+}
+
+/* Loading Spinner */
+#loading {
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.92);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.spinner {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #d32f2f;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Footer with Banner */
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.footer-banner {
+    width: 100%;
+    max-width: 800px; /* smaller in footer to not dominate */
+    height: auto;
+    display: block;
+    margin: 0 auto 1.5rem;
+    border-radius: 8px;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.social-links {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #d32f2f; /* red hover */
+}
+
+@media (max-width: 768px) {
+    .banner-image, .footer-banner {
+        max-height: 200px;
+    }
+    .container {
+        padding: 0 1rem;
+    }
+}
